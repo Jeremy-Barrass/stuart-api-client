@@ -1,9 +1,9 @@
 function ApiSearch(){};
 
-ApiSearch.prototype.go = function(url, useResponse){
+ApiSearch.prototype.go = function(option, url, useResponse){
 	var resp, err;
 	var request = new XMLHttpRequest();
-	request.open('GET', url, true);
+	request.open(option, url, true);
 	request.onload = function(){
 		if (request.status >= 200 && request.status < 400) {
 			resp = request.responseText;

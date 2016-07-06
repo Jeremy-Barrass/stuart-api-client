@@ -1,12 +1,13 @@
 describe('apiSearch', function(){
-	var api;
+	var option, url, api;
 
 	beforeEach(function(){
+		option = 'GET';
 		url = 'www.pretendurl.com/user/Mickey';
 		api = new ApiSearch();
 	});
 
-	it('sends a search request', function(){
+	it('sends a request', function(){
 		var reqSent = jasmine.createSpy('success');
 		jasmine.Ajax.withMock(function(){
 			XMLHttpRequest.prototype.onreadystatechange = function(args){
@@ -14,7 +15,7 @@ describe('apiSearch', function(){
 					reqSent(this.responseText);
 				}
 			};
-			api.go(url, function(){});
+			api.go(option, url, function(){});
 			expect(reqSent).not.toHaveBeenCalled();
 			jasmine.Ajax.requests.mostRecent().respondWith({
 				"status": 200,
