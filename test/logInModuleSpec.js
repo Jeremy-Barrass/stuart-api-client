@@ -1,10 +1,11 @@
 describe('logInModule',function(){
-	var lim, username, password;
+	var lim, username, password, token;
 
 	beforeEach(function(){
 		lim = new logInModule();
-		username = 'jeremy'
-		password = '1234test'
+		username = 'jeremy';
+		password = '1234test';
+		token = 'token';
 	});
 
 	it('sets the username',function(){
@@ -19,6 +20,6 @@ describe('logInModule',function(){
 
 	it('sets the authorisation token', function(){
 		lim.setToken(token);
-		expect(lim.getToken).toEqual(token);
+		expect(lim.getToken()).toEqual(token);
 	});
 });
