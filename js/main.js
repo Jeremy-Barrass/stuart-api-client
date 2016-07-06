@@ -1,3 +1,8 @@
-import {ApiSearch} from './apiSearch';
+function Main(){
+	this.api = new ApiCaller();
+	this.login = new logInModule();
 
-var api = new ApiSearch();
+	document.addEventListener('DOMContentLoaded', function(){
+		
+	});
+};

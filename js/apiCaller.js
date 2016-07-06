@@ -1,6 +1,6 @@
-function ApiSearch(){};
+function ApiCaller(){};
 
-ApiSearch.prototype.go = function(option, url, useResponse){
+ApiCaller.prototype.go = function(option, url, useResponse){
 	var resp, err;
 	var request = new XMLHttpRequest();
 	request.open(option, url, true);

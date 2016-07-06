@@ -1,10 +1,10 @@
-describe('apiSearch', function(){
+describe('apiCaller', function(){
 	var option, url, api;
 
 	beforeEach(function(){
 		option = 'GET';
 		url = 'www.pretendurl.com/user/Mickey';
-		api = new ApiSearch();
+		api = new ApiCaller();
 	});
 
 	it('sends a request', function(){
