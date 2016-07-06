@@ -11,4 +11,14 @@ describe('logInModule',function(){
 		lim.setUsername(username);
 		expect(lim.getUsername()).toEqual(username);
 	});
+
+	it('sets the password', function(){
+		lim.setPassword(password);
+		expect(lim.getPassword()).toEqual(password);
+	});
+
+	it('sets the authorisation token', function(){
+		lim.setToken(token);
+		expect(lim.getToken).toEqual(token);
+	});
 });
